@@ -60,7 +60,7 @@ namespace Biblioteca.Controllers
         [HttpPost]
         public IActionResult ExcluirUsuario(string decisao, int id)
         {
-            if(decisao=="EXCLUIR")
+            if(decisao=="Excluir")
             {
                 new UsuarioService().excluirUsuario(id);
                 return View("ListaDeUsuarios", new UsuarioService().Listar());

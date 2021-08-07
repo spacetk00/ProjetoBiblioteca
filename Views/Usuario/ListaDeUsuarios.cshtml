@@ -4,11 +4,13 @@
 <p class="text-danger">@ViewData["Mensagem"]</p>
 
 <table class="table table-striped">
-    <thead>
+    <thead class="thead-dark">
         <tr>
             <th scope="row">Nome</th>
             <th scope="row">Login</th>
             <th scope="row">Tipo</th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
 
@@ -27,11 +29,11 @@
                     <td>Padrão</td>
                 }
 
-                <td><a href="editarUsuario?id=@u.Id">Editar</a></td>
-                <td><a href="ExcluirUsuario?id=@u.Id">Excluir</a></td>
+                <td><a href="editarUsuario?id=@u.Id" class="btn btn-warning">Editar</a></td>
+                <td><a href="ExcluirUsuario?id=@u.Id" class="btn btn-danger">Excluir</a></td>
             </tr>
         }
     </tbody>
 </table>
 
-<a href="RegistrarUsuario">Registrar novo usuario</a>
+<a href="RegistrarUsuario" class="btn btn-primary">Registrar novo usuario</a>

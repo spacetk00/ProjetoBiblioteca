@@ -1,17 +1,23 @@
 @model Usuario
+<h1 class="row justify-content-md-center">Registre um usuário</h1>
+<div class="row justify-content-md-center">
+    <form action="RegistrarUsuario" method="post">
+        <div class="form-group">
+        <input type="text" name="Nome" id="userNome" placeholder="Nome">
+        </div>
+        <div class="form-group">
+        <input type="text" name="Login" id="userLogin" placeholder="Login">
+        </div>
+        <div class="form-group">
+        <input type="text" name="Senha" id="userSenha" placeholder="Senha">
+        </div>
 
-<h1>Registre um usuário</h1>
 
-<form action="RegistrarUsuario" method="post">
-    <input type="text" name="Nome" id="userNome" placeholder="Nome">
-    <input type="text" name="Login" id="userLogin" placeholder="Login">
-    <input type="text" name="Senha" id="userSenha" placeholder="Senha">
+        <select name="tipo" id="userTipo">
+            <option value=1>Administrador</option>
+            <option value=0>Padrão</option>
+        </select>
 
-
-     <select name="tipo" id="userTipo">
-        <option value=1>Administrador</option>
-        <option value=0>Padrão</option>
-    </select>
-
-    <input type="submit" value="REGISTRAR">
-</form>
+        <input type="submit" class="btn btn-primary" value="Registrar">
+    </form>
+</div>
